@@ -1,0 +1,9 @@
+usable characters after standardization: 852/852
+
+AUC (mean ± std over folds); 0.50 = no signal
+input                                            random split   session-grouped
+raw photo metadata (acquisition only)          0.897±0.018   0.851±0.113
+standardized SHAPE features (10), RF           0.817±0.033   0.834±0.139
+standardized 24x24 binary glyph, LogReg        0.639±0.066   0.625±0.059
+
+single shape feature AUC (direction-free): {'bbox_aspect': 0.53, 'ink_ratio': 0.56, 'stroke_rel': 0.59, 'stroke_cv': 0.52, 'skel_len': 0.54, 'endpoints': 0.52, 'junctions': 0.52, 'solidity': 0.59, 'n_comp': 0.51, 'skel_curv': 0.53}

@@ -1,0 +1,27 @@
+=== SOURCE-LEAKAGE CHECK: can a model tell dyslexia-set vs dysgraphia-set? (balanced acc; chance = 0.50) ===
+(a) raw file metadata (size, aspect, brightness, mode...)      0.995 ± 0.010
+(b) standardized pixels, RandomForest                          0.964 ± 0.020
+(b) standardized pixels, LogisticReg                           0.954 ± 0.040
+(c) 16 handcrafted features                                    0.958 ± 0.019
+
+=== FEATURE SANITY: per-task baselines (5x5 repeated CV; class = positive label) ===
+
+dyslexia: n=100  pos=50  neg=50
+  LogReg        AUC=0.979±0.028  balAcc=0.918  F1=0.911
+  RandomForest  AUC=0.987±0.015  balAcc=0.930  F1=0.930
+  top features (P(pos>neg), p-value, median pos vs neg):
+    word_gap_cv          0.86  p=0.0000  0.353 vs 0.224
+    stroke_cv            0.85  p=0.0000  0.306 vs 0.250
+    slant_mean_abs       0.27  p=0.0001  5.809 vs 12.878
+    size_ratio           0.69  p=0.0010  0.480 vs 0.430
+    ink_density          0.69  p=0.0013  0.160 vs 0.130
+
+dysgraphia: n=249  pos=114  neg=135
+  LogReg        AUC=0.921±0.036  balAcc=0.846  F1=0.834
+  RandomForest  AUC=0.939±0.031  balAcc=0.862  F1=0.849
+  top features (P(pos>neg), p-value, median pos vs neg):
+    stroke_mean          0.22  p=0.0000  0.132 vs 0.185
+    word_gap_mean        0.23  p=0.0000  1.120 vs 1.628
+    letter_height_cv     0.26  p=0.0000  0.286 vs 0.372
+    comps_per_line       0.28  p=0.0000  28.000 vs 35.000
+    size_ratio           0.71  p=0.0000  0.532 vs 0.395

@@ -1,0 +1,20 @@
+
+===== dyslexia (n=100) =====
+all 16 features                               AUC 0.988
+RAW FILE METADATA ONLY (no handwriting used)  AUC 0.976   <- shortcut check
+one group ALONE  |  everything EXCEPT that group
+  size/shape  alone 0.829   |   without 0.962
+  baseline    alone 0.835   |   without 0.984
+  stroke      alone 0.789   |   without 0.979
+  slant       alone 0.775   |   without 0.985
+  spacing     alone 0.893   |   without 0.968
+
+===== dysgraphia (n=249) =====
+all 16 features                               AUC 0.943
+RAW FILE METADATA ONLY (no handwriting used)  AUC 0.813   <- shortcut check
+one group ALONE  |  everything EXCEPT that group
+  size/shape  alone 0.790   |   without 0.934
+  baseline    alone 0.599   |   without 0.933
+  stroke      alone 0.763   |   without 0.920
+  slant       alone 0.585   |   without 0.947
+  spacing     alone 0.821   |   without 0.907

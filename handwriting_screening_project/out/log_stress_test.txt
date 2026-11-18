@@ -1,0 +1,5 @@
+blank page               REFUSED
+random noise             REFUSED
+typed text (digital)     REFUSED
+tiny 80x40 image         REFUSED
+PASS

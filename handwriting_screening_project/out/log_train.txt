@@ -1,0 +1,20 @@
+
+===== dyslexia  (n=100, pos=50)  [102s] =====
+model                                AUC   BalAcc     F1   Sens   Spec   Brier
+final_RF_calibrated        0.986±0.024    0.926  0.928  0.952  0.900   0.065
+logreg                     0.974±0.037    0.900  0.890  0.840  0.960   0.068
+metadata_only_RF           0.978±0.022    0.910  0.912  0.920  0.900   0.064
+label_shuffle_control      0.495±0.189    0.484  0.445  0.420  0.548   0.271
+paired AUC gain over metadata-only: +0.008 (95% range -0.038..+0.050); better in 48% of 25 folds
+confusion (OOF, rows=true 0/1, cols=pred 0/1): [[46, 4], [2, 48]]
+top permutation importance: [('word_gap_cv', 0.108), ('stroke_cv', 0.066), ('ink_density', 0.019), ('slant_mean_abs', 0.0116), ('slant_var', 0.0028)]
+
+===== dysgraphia  (n=249, pos=114)  [210s] =====
+model                                AUC   BalAcc     F1   Sens   Spec   Brier
+final_RF_calibrated        0.942±0.027    0.863  0.851  0.842  0.884   0.102
+logreg                     0.918±0.028    0.848  0.836  0.842  0.853   0.115
+metadata_only_RF           0.823±0.067    0.759  0.732  0.726  0.791   0.172
+label_shuffle_control      0.520±0.132    0.514  0.436  0.408  0.619   0.259
+paired AUC gain over metadata-only: +0.119 (95% range +0.012..+0.221); better in 96% of 25 folds
+confusion (OOF, rows=true 0/1, cols=pred 0/1): [[120, 15], [18, 96]]
+top permutation importance: [('word_gap_mean', 0.0843), ('stroke_cv', 0.0378), ('stroke_mean', 0.0337), ('word_gap_cv', 0.0239), ('size_ratio', 0.0122)]

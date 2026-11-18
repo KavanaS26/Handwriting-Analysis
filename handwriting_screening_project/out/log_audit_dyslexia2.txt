@@ -1,0 +1,31 @@
+=== class-pure sessions? (share of images whose capture-session key appears in only ONE class) ===
+26 session keys; 23 are class-pure, covering 298 of 852 images (35%)
+label                   0    1
+session                       
+IMG_camroll            87  143
+date_2024-02-26        50   40
+date_2024-02-04        47  187
+IMGdt_20231216_150534  37    0
+batch_10               31    0
+batch_9                29    0
+batch_13               20    0
+batch_11               17    0
+batch_14               17    0
+batch_12               16    0
+IMGdt_20231216_135244  10    0
+batch_1                 8    0
+
+=== single-field AUC (0.5 = no signal) ===
+  w         0.591
+  h         0.595
+  aspect    0.534
+  bright    0.527
+  contrast  0.554
+  warm      0.631
+  sharp     0.559
+  kb        0.612
+  ext       0.558
+
+=== metadata-only classifier (no handwriting content) ===
+  random split           AUC 0.897 ± 0.018
+  session-grouped split  AUC 0.851 ± 0.113
